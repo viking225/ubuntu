@@ -71,7 +71,9 @@ sudo apt-get install plank -y
 echo "########################## Git Kraken ######################"
 wget -oq "$BASE_DIRECTORY/gitkraken.insall.deb" https://release.gitkraken.com/linux/gitkraken-amd64.deb --show-progress
 sudo dpkg -i "BASE_DIRECTORY/gitkraken.insall.deb"
-
+#sollar
+echo "########################## Solaar gnome ######################"
+sudo apt install solaar-gnome3 -y
 #End By Reboot
 sudo apt-get update
 sudo apt-get upgrade

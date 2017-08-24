@@ -1,6 +1,9 @@
 #!/bin/bash
 #Script d'installation de base du pc de kevin
 echo "Exécution du script d'installation des utilitaires"
+BASE_DIRECTORY = 'baseinstall'
+mkdir "$BASE_DIRECTORY"
+
 echo "##############################################################################"
 echo "Graphic pilot"
 sudo apt-get install -y vim
@@ -64,7 +67,11 @@ sudo apt-get upgrade
 sudo apt-get install adapta-backgrounds adapta-gtk-theme -y
 sudo apt-get install paper-icon-theme -y
 sudo apt-get install plank -y
-#
+#GIT KRAKEN
+echo "########################## Git Kraken ######################"
+wget -oq "$BASE_DIRECTORY/gitkraken.insall.deb" https://release.gitkraken.com/linux/gitkraken-amd64.deb --show-progress
+sudo dpkg -i "BASE_DIRECTORY/gitkraken.insall.deb"
+
 #End By Reboot
 sudo apt-get update
 sudo apt-get upgrade

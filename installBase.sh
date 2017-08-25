@@ -56,6 +56,8 @@ sudo apt-get install pep -y
 sudo apt install python-pip -y
 #curl
 sudo apt install curl -y
+#ACPI
+sudo apt install acpi -y
 #Chromium
 echo "#################### Chromium #######################"
 sudo apt-get install chromium-browser -y
@@ -63,10 +65,12 @@ sudo apt-get install chromium-browser -y
 echo "#################### PHP #######################"
 sudo apt-get install php -y
 #Node Js
-echo "#################### Node JS #######################"
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install nodejs -y
+echo "#################### Npm #######################"
 sudo apt install npm -y
+#nvm
+echo "#################### NODE VERSION MANAGER ##################"
+wget --show-progress -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm install node
 #Adapta Theme
 echo "#################### Adapta Theme  #######################"
 sudo add-apt-repository ppa:tista/adapta
@@ -74,7 +78,7 @@ sudo add-apt-repository ppa:snwh/pulp
 sudo apt-get update 
 sudo apt-get upgrade
 sudo apt-get install adapta-backgrounds adapta-gtk-theme -y
-sudo apt-get install paper-icon-theme -y
+sudo apt-get install paper-icon-theme -ye
 sudo apt-get install plank -y
 #GIT KRAKEN
 echo "########################## Download Git Kraken ######################"
@@ -91,6 +95,11 @@ sudo dpkg -i /tmp/wps_office_suite.deb
 echo "Mongo Compass"
 wget -q --show-progress https://downloads.mongodb.com/compass/mongodb-compass_1.8.2_amd64.deb --output-document=/tmp/mongodb_compass.deb
 sudo dpkg -i /tmp/mongodb_compass.deb
+#slack
+echo "##################### SLACK ###################"
+wget -q --show-progress https://downloads.slack-edge.com/linux_releases/slack-desktop-2.7.1-amd64.deb --output-document=/tmp/slack-desktop
+sudo dpkg -i /tmp/slack-desktop
+
 echo "##################### Docker ##########################"
 echo "####################### Oh My Zsh #########################"
 sudo apt install zsh -y

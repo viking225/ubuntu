@@ -1,0 +1,7 @@
+version: '2'
+
+services: 
+  ubuntu:
+    build: .
+    volumes:
+      - ./cmd/:/home/ktano/cmd

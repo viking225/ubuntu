@@ -1,7 +1,9 @@
-version: '2'
+version: '3'
 
 services: 
-  ubuntu:
-    build: .
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./cmd/:/home/ktano/cmd
